@@ -4,5 +4,11 @@ import { render } from 'react-dom';
 import App from './App';
 
 import './assets/sass/main.scss';
+import ContextProvider from './context/context';
 
-render(<App />, document.getElementById('root'));
+render(
+  <ContextProvider>
+    <App />
+  </ContextProvider>,
+  document.getElementById('root')
+);

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../context/context';
 import CardContent from './CardContent/CardContent';
-import CardPoster from './CardPoster/CardPoster';
+
+import PosterList from './PosterList/PosterList';
 const Card = () => {
+  const { state } = useContext(Context);
   return (
     <div className="card">
-      <CardPoster />
+      <PosterList />
       <CardContent />
     </div>
   );
